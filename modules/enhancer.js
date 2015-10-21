@@ -27,7 +27,7 @@ const copyProperties = function (source, target) {
   });
 };
 
-const enhanceWithRadium = function (
+export default function enhanceWithRadium(
   configOrComposedComponent: constructor | Function | Object,
   config?: Object = {},
 ): constructor {
@@ -117,6 +117,4 @@ const enhanceWithRadium = function (
   RadiumEnhancer.printStyleClass = printStyles.addPrintStyles(RadiumEnhancer);
 
   return RadiumEnhancer;
-};
-
-module.exports = enhanceWithRadium;
+}
